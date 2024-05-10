@@ -1,0 +1,19 @@
+01:28:05 **** Incremental Build of configuration Debug for project 001HelloSemihosting ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "001HelloSemihosting.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\arath\Desktop\Embedded Software\STM32 with HAL\001HelloSemihosting\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001HelloSemihosting.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001HelloSemihosting.elf
+ 
+arm-none-eabi-size   001HelloSemihosting.elf 
+arm-none-eabi-objdump -h -S  001HelloSemihosting.elf  > "001HelloSemihosting.list"
+   text	   data	    bss	    dec	    hex	filename
+   4736	    116	   1756	   6608	   19d0	001HelloSemihosting.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001HelloSemihosting.list
+ 
+
+01:28:06 Build Finished. 0 errors, 0 warnings. (took 347ms)
+

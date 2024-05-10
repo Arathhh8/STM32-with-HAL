@@ -1,0 +1,11 @@
+#include "main.h"
+
+int main(void){
+
+	// Initialize HAL library
+	HAL_Init();
+
+	while(1){
+
+	}
+}

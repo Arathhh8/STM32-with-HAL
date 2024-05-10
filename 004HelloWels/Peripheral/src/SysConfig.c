@@ -1,0 +1,39 @@
+/*
+ * SysConfig.c
+ *
+ *  Created on: May 10, 2024
+ *      Author: arath
+ */
+
+#include "SysConfig.h"
+
+bool SysConfigClock(){
+
+	RCC_OscInitTypeDef oscInit = {0};
+	RCC_ClkInitTypeDef clkInit = {0};
+
+	oscInit.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+	oscInit.HSEState = RCC_HSE_ON;
+	oscInit.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	oscInit.PLL.PLLState = RCC_PLL_ON;
+	oscInit.PLL.PLLMUL = 9;
+
+	if(HAL_RCC_OscConfig(&oscInit) != HAL_OK){
+		return false;
+	}
+
+	clkInit.ClockType = RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK |
+						RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+	clkInit.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+	clkInit.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	clkInit.APB1CLKDivider = RCC_HCLK_DIV2;
+	clkInit.APB2CLKDivider = RCC_HCLK_DIV1;
+
+	if(HAL_RCC_ClockConfig(&clkInit, FLASH_ACR_LATENCY_2 != HAL_OK)){
+		return false;
+	}
+	return true;
+
+}
+
+

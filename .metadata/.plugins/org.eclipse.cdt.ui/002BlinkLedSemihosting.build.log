@@ -1,0 +1,10 @@
+13:58:14 **** Incremental Build of configuration Debug for project 002BlinkLedSemihosting ****
+make -j12 all 
+arm-none-eabi-size   002BlinkLedSemihosting.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8808	    128	   1760	  10696	   29c8	002BlinkLedSemihosting.elf
+Finished building: default.size.stdout
+ 
+
+13:58:14 Build Finished. 0 errors, 0 warnings. (took 216ms)
+

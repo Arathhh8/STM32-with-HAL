@@ -1,0 +1,21 @@
+/*
+ * SysConfig.c
+ *
+ *  Created on: May 10, 2024
+ *      Author: arath
+ */
+
+#include "SysConfig.h"
+
+void SysConfigClock(){
+
+	RCC_OscInitTypeDef oscInit = {0};
+	RCC_ClkInitTypeDef clkInit = {0};
+
+	oscInit.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+	oscInit.HSEState = RCC_HSE_ON;
+	oscInit.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	oscInit.PLL.PLLState = RCC_PLL_ON;
+}
+
+
