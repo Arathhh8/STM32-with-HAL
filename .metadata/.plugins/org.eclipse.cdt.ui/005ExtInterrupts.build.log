@@ -1,0 +1,10 @@
+01:23:01 **** Incremental Build of configuration Debug for project 005ExtInterrupts ****
+make -j12 all 
+arm-none-eabi-size   005ExtInterrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5060	     20	   1572	   6652	   19fc	005ExtInterrupts.elf
+Finished building: default.size.stdout
+ 
+
+01:23:01 Build Finished. 0 errors, 0 warnings. (took 233ms)
+

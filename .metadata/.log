@@ -8855,3 +8855,21 @@ java.lang.IllegalArgumentException: Argument not valid
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-05-10 14:54:14.054
 !MESSAGE Indexed '004HelloWels' (17 sources, 78 headers) in 0.423 sec: 3,634 declarations; 13,177 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+!SESSION 2024-05-15 23:57:25.871 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-15 23:57:39.393
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-15 23:57:39.457
+!MESSAGE Log4j initialized with config file C:\Users\arath\Desktop\Embedded Software\STM32 with HAL\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-15 23:57:56.385
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-16 00:03:34.675
+!MESSAGE Indexed '005ExtInterrupts' (17 sources, 78 headers) in 2.43 sec: 3,642 declarations; 13,230 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
